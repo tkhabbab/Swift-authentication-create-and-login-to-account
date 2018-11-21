@@ -27,7 +27,7 @@ class SignUpViewController: UIViewController {
     }
     @IBAction func getData(_ sender: Any) {
         
-        guard let url = URL(string: "https://fiveorzero.ml/api/v1/user/profile/") else { return }
+        guard let url = URL(string: "https://xyz your site/user/profile/") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
@@ -50,14 +50,12 @@ class SignUpViewController: UIViewController {
             }.resume()
     }
     
+    
     @IBAction func signup(_ sender: Any) {
-        
-        
-        //let parameters: parameters  = ["name": "Tusher", "phoneNo": "012563", "password": "2gdsgh45", "birthday": "2018-12-23","gender": "1"]
         
         let parameters = ["name": n.text!, "phoneNo": p.text!, "password": ph.text!, "birthday": dob.text!,"gender": g.text!]
         
-        guard let url = URL(string: "https://fiveorzero.ml/api/v1/user/new") else { return }
+        guard let url = URL(string: "https://xyz your site/user/new") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
